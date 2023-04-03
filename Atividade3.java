@@ -3,7 +3,7 @@ a soma e o produto desses três números. */
 
 import java.util.Scanner;
 
-public class Main {
+public class Atividade3 {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         int a, b, c, soma, produto;

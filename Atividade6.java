@@ -15,10 +15,8 @@ public class Atividade6 {
         if (idade >= 18){
             System.out.print("Entrada permitida. ");
         }
-
         else{
             System.out.print("Entrada negada. ");
         }
-
     }
 }

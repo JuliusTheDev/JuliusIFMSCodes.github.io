@@ -12,27 +12,32 @@ import java.util.Scanner;
 
 public class Main {
 
-  public static int fibonacci(int n) {
-    if (n <= 1) {
-      return n;
+    public static int fibonacci(int n) {
+        if (n == 1) {
+            return 0;
+        }
+        if (n == 2) {
+            return 1;
+        }
+
+        else {
+            return fibonacci(n-1) + fibonacci(n-2);
+        }
     }
-    else {
-      return fibonacci(n-1) + fibonacci(n-2);
-   }
-  }
 
-  public static void main(String[] args) {
-    Scanner leitor = new Scanner(System.in);
 
-    System.out.print("Digite o número de casos de teste: ");
-    int k = leitor.nextInt();
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
 
-    for (int i = 1; i <= k; i++) {
-      System.out.print("Digite o número N do caso de teste " + i + ": ");
-      int n = leitor.nextInt();
+        System.out.print("Digite o número de casos de teste: ");
+        int k = leitor.nextInt();
 
-      int resultado = fibonacci;
-      System.out.println("O " + n + "º termo da sequência de Fibonacci é: " + resultado);
-   }
-  }
+        for (int i = 1; i <= k; i++) {
+            System.out.print("Digite o número N do caso de teste " + i + ": ");
+            int n = leitor.nextInt();
+
+            int resultado = fibonacci(n);
+            System.out.println("O " + n + "º termo da sequência de Fibonacci é: " + resultado);
+        }
+    }
 }

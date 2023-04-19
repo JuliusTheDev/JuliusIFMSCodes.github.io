@@ -1,0 +1,38 @@
+/* 6a) Implemente uma função fibonacci que recebe de parâmetro um número inteiro positivo N e retorna o valor do N-ésimo termo da sequência de Fibonacci.
+Considere que a sequência de Fibonacci é uma sequência de números inteiros positivos que inicia pelos inteiros 0 e 1, e cada termo subsequente, é obtido através da
+soma de seus dois termos antecessores. Os números de Fibonacci são os números que compõem a seguinte sequência: 
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, … e assim por diante.
+
+6b) Implemente um programa que solicite ao usuário um número inteiro positivo k representando a quantidade de casos de teste. Para cada caso de teste, solicite um
+número inteiro N e, utilizando a função fibonacci, exiba na saída o N-ésimo termo da sequência de fibonacci.*/
+
+
+
+import java.util.Scanner;
+
+public class Main {
+
+  public static int fibonacci(int n) {
+    if (n <= 1) {
+      return n;
+    }
+    else {
+      return fibonacci(n-1) + fibonacci(n-2);
+   }
+  }
+
+  public static void main(String[] args) {
+    Scanner leitor = new Scanner(System.in);
+
+    System.out.print("Digite o número de casos de teste: ");
+    int k = leitor.nextInt();
+
+    for (int i = 1; i <= k; i++) {
+      System.out.print("Digite o número N do caso de teste " + i + ": ");
+      int n = leitor.nextInt();
+
+      int resultado = fibonacci;
+      System.out.println("O " + n + "º termo da sequência de Fibonacci é: " + resultado);
+   }
+  }
+}

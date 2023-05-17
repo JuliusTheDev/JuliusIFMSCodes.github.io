@@ -4,13 +4,13 @@ a) Os n primeiros pares (considere o zero como primeiro número par) e
 b) A soma dos ímpares de 1 até o último número par exibido. */
 
 import java.util.Scanner;
-public class Exercicio1 {
+public class Main {
 
     public static void main(String[] args){
 
         Scanner input = new Scanner(System.in);
 
-        int n, par = 0, soma = 1, contador = 0, contador2 = 0;
+        int n, par = 0, soma = 0, contador = 0, contador2 = 0;
 
         System.out.println("Informe um número inteiro positivo:");
         n = input.nextInt();
@@ -25,15 +25,14 @@ public class Exercicio1 {
         }
 
         contador = 0;
-        
 
-        while(contador < n){
 
+        while(contador <= par - 2){
             if(contador % 2 != 0){
-                soma = soma + 2;
+                soma = soma + contador;
             }
 
-            
+
             contador++;
         }
 
